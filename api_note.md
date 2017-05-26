@@ -4,6 +4,8 @@ Version = __v1__
 
 Enterpoint = __/api/VERSION__
 
+---
+
 /api/v1/datetime
 ```json
 {
