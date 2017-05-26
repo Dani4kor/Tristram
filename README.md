@@ -3,11 +3,10 @@
 
 #### Dependencies
 
-* __EVE__
+- __EVE__
+- __mongoDB__
 
-* __mongoDB__
 
-See requirements.txt for detailed information
 
 #### Usage
 
