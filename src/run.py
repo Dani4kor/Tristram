@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+
+from eve import Eve
+from flask import render_template, jsonify
+from datetime import datetime
+
+
+
+
+app = Eve(__name__, settings='settings.py', template_folder='templates')
+
+
+
+
+@app.route('/api/v1/datetime', methods=['GET'])
+def get_datetime():
+  return jsonify(results = datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+
+
+@app.route('/')
+def hello_world():
+    return render_template('index.html')
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5001)
