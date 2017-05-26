@@ -5,16 +5,12 @@ from flask import render_template, jsonify
 from datetime import datetime
 
 
-
-
 app = Eve(__name__, settings='settings.py', template_folder='templates')
-
-
 
 
 @app.route('/api/v1/datetime', methods=['GET'])
 def get_datetime():
-  return jsonify(results = datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+    return jsonify(results=datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
 
 
 @app.route('/')
