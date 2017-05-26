@@ -46,11 +46,14 @@ pic = {
     }
 }
 
+EXTENDED_MEDIA_INFO = ['content_type', 'name', 'length']
 
+# Enable URL_PREFIX.  Used in conjunction with API_VERSION to build
+# API Endpoints of the form <base_route>/<url_prefix>/<api_version>/
+URL_PREFIX = 'api'
 
-
-URL_PREFIX='api'
-
-API_VERSION='v1'
+# Enable API Versioning.  This will force API Calls to follow a form of
+# <base_route>/<api_version>/<resource_title>/...
+API_VERSION = 'v1'
 
 DOMAIN = {'pic': pic}
