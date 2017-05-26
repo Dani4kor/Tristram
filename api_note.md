@@ -25,8 +25,8 @@ Enterpoint = __/api/VERSION__
 	            "type": "string",
 	            "minlength": 1,
 	            "maxlength": 32,
-	            "required": True,
-	            "unique": True,
+	            "required": true,
+	            "unique": true,
 	        },
 	        "tag": {
 	            "type": "string",
@@ -44,7 +44,7 @@ Enterpoint = __/api/VERSION__
 	        },
 	        "active": {
 	            "type": "boolean",
-	            "default": True
+	            "default": true
 	    }
 	}
 }
