@@ -10,7 +10,7 @@ app = Eve(__name__, settings='settings.py', template_folder='templates')
 
 @app.route('/api/v1/datetime', methods=['GET'])
 def get_datetime():
-    return jsonify(results=datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+    return jsonify(datetime=datetime.now().strftime('%Y-%m-%d %H:%M:%S'), mimetype='application/json')
 
 
 @app.route('/')
