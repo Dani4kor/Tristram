@@ -1,2 +1,22 @@
-# Tristram
-h1pst3r prj
+## Tristram prj
+
+
+#### Dependencies
+
+* __EVE__
+
+* __mongoDB__
+
+__See requirements.txt for detailed information__
+
+#### Usage
+
+
+
+
+
+
+
+
+
+
