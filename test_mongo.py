@@ -9,5 +9,4 @@ db = client.everest
 pic_collection = db.pic
 
 cursor = pic_collection.find({})
-for document in cursor:
-    pprint(document)
+pprint([document for document in cursor])
