@@ -67,4 +67,9 @@ API_VERSION = 'v1'
 
 DOMAIN = {'image': image}
 
+HATEOAS = True
+
+PROJECTION = True
+
 DEBUG = True
+
