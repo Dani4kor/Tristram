@@ -24,7 +24,6 @@ image = {
         'field': 'filename'
     },
     'schema': {
-        
         'filename': {
             'type': 'string',
             'minlength': 1,
@@ -40,7 +39,7 @@ image = {
         'image': {
             'type': 'media',
         }
-       
+
     }
 }
 
@@ -72,4 +71,3 @@ HATEOAS = True
 PROJECTION = True
 
 DEBUG = True
-
