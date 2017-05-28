@@ -16,7 +16,7 @@ Enterpoint = __/api/VERSION__
 
 ---
 
-/api/v1/pic
+/api/v1/image
 ```json
 {
 	'schema': {
