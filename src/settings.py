@@ -14,15 +14,15 @@ MONGO_URI = ""
 RESOURCE_METHODS = ['GET', 'POST']
 ITEM_METHODS = ['GET', 'PATCH', 'PUT', 'DELETE']
 
-pic = {
 
-    'item_title': 'picture',
+image = {
+
+    'item_title': 'images',
 
     'additional_lookup': {
         'url': 'regex("[\w]+")',
         'field': 'filename'
     },
-
     'schema': {
         'filename': {
             'type': 'string',
@@ -31,22 +31,30 @@ pic = {
             'required': True,
             'unique': True,
         },
-        'pic': {
+        'tag': {
+            'type': 'string',
+            'minlength': 1,
+            'maxlength': 10,
+        },
+        'image': {
             'type': 'media',
-        },
-
-        'born': {
-            'type': 'datetime',
-        },
-
-        'active': {
-            'type': 'boolean',
-            'default': True
         }
+
     }
 }
 
 EXTENDED_MEDIA_INFO = ['content_type', 'name', 'length']
+
+# disable default behaviour
+RETURN_MEDIA_AS_BASE64_STRING = False
+
+# return media as URL instead
+RETURN_MEDIA_AS_URL = True
+
+# set up the desired media endpoint
+# MEDIA_BASE_URL = ''
+MEDIA_ENDPOINT = 'image/media'
+
 
 # Enable URL_PREFIX.  Used in conjunction with API_VERSION to build
 # API Endpoints of the form <base_route>/<url_prefix>/<api_version>/
@@ -56,4 +64,10 @@ URL_PREFIX = 'api'
 # <base_route>/<api_version>/<resource_title>/...
 API_VERSION = 'v1'
 
-DOMAIN = {'pic': pic}
+DOMAIN = {'image': image}
+
+HATEOAS = True
+
+PROJECTION = True
+
+DEBUG = True
