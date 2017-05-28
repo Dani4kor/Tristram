@@ -19,21 +19,21 @@ Enterpoint = __/api/VERSION__
 /api/v1/image
 ```json
 {
-	'schema': {
-        'filename': {
-            'type': 'string',
-            'minlength': 1,
-            'maxlength': 32,
-            'required': True,
-            'unique': True,
+	"schema": {
+        "filename": {
+            "type": "string",
+            "minlength": 1,
+            "maxlength": 32,
+            "required": true,
+            "unique": true,
         },
-        'tag': {
-            'type': 'string',
-            'minlength': 1,
-            'maxlength': 10,
+        "tag": {
+            "type": "string",
+            "minlength": 1,
+            "maxlength": 10,
         },
-        'image': {
-            'type': 'media',
+        "image": {
+            "type": "media",
         }
     }
 ```
