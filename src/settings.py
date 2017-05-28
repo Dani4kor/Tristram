@@ -40,14 +40,6 @@ pic = {
         'pic': {
             'type': 'media',
         },
-        'born': {
-            'type': 'datetime',
-        },
-
-        'active': {
-            'type': 'boolean',
-            'default': True
-        }
     }
 }
 
