@@ -54,7 +54,7 @@ RETURN_MEDIA_AS_URL = True
 
 # set up the desired media endpoint
 # MEDIA_BASE_URL = ''
-MEDIA_ENDPOINT = 'media'
+MEDIA_ENDPOINT = 'image/media'
 
 
 # Enable URL_PREFIX.  Used in conjunction with API_VERSION to build
