@@ -15,16 +15,16 @@ RESOURCE_METHODS = ['GET', 'POST']
 ITEM_METHODS = ['GET', 'PATCH', 'PUT', 'DELETE']
 
 
-pic = {
+image = {
 
-    'item_title': 'picture',
+    'item_title': 'images',
 
     'additional_lookup': {
         'url': 'regex("[\w]+")',
         'field': 'filename'
     },
-
     'schema': {
+        
         'filename': {
             'type': 'string',
             'minlength': 1,
@@ -37,9 +37,10 @@ pic = {
             'minlength': 1,
             'maxlength': 10,
         },
-        'pic': {
+        'image': {
             'type': 'media',
-        },
+        }
+       
     }
 }
 
@@ -64,6 +65,6 @@ URL_PREFIX = 'api'
 # <base_route>/<api_version>/<resource_title>/...
 API_VERSION = 'v1'
 
-DOMAIN = {'pic': pic}
+DOMAIN = {'image': image}
 
 DEBUG = True
