@@ -1,1 +1,1 @@
-web: gunicorn runheroku:app --log-file -
+web: gunicorn src.run --log-file=-
