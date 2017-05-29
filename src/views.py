@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from flask import render_template, jsonify
 from datetime import datetime
 from eve_healthcheck import EveHealthCheck
