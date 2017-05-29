@@ -1,10 +1,9 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 from eve import Eve
 from flask import render_template, jsonify
 from datetime import datetime
-from eve_healthcheck import EveHealthCheck
+
 
 app = Eve(__name__, settings='settings.py', template_folder='templates')
 
@@ -20,5 +19,4 @@ def hello_world():
 
 
 if __name__ == '__main__':
-    EveHealthCheck(app, '/healthcheck')
     app.run(host='0.0.0.0', port=5001)
