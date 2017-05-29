@@ -1,5 +1,6 @@
 # Custom 
 *.pyc
+mysettings
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

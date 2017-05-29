@@ -9,7 +9,7 @@ if 'PORT' in os.environ:
     port = int(os.environ.get('PORT'))
     host = '0.0.0.0'
 else:
-    port = 5000
+    port = 5001
     host = '0.0.0.0'
 
 app.run(host=host, port=port)
