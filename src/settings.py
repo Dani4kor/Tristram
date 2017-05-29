@@ -8,7 +8,7 @@ import os
 if 'MONGOLAB_URI' in os.environ:
     MONGO_URI = str(os.environ.get('MONGOLAB_URI'))
 else:
-    with open('mysettings', 'r') as f:
+    with open('mysettings.txt', 'r') as f:
         MONGO_URI = f.readline()
 
 RESOURCE_METHODS = ['GET', 'POST']
