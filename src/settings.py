@@ -7,22 +7,9 @@ import os
 
 if 'MONGOLAB_URI' in os.environ:
     MONGO_URI = str(os.environ.get('MONGOLAB_URI'))
-    DEBUG = False
-
 else:
     with open('mysettings', 'r') as f:
         MONGO_URI = f.readline()
-    DEBUG = True
-
-# local mongoDB
-# MONGO_HOST = 'localhost'
-# MONGO_PORT = 27017
-# MONGO_USERNAME = 'user'
-# MONGO_PASSWORD = 'user'
-# MONGO_DBNAME = 'apitest'
-
-
-
 
 RESOURCE_METHODS = ['GET', 'POST']
 ITEM_METHODS = ['GET', 'PATCH', 'PUT', 'DELETE']
@@ -83,3 +70,5 @@ DOMAIN = {'image': image}
 HATEOAS = True
 
 PROJECTION = True
+
+DEBUG = False
