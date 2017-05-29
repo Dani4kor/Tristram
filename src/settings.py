@@ -70,4 +70,4 @@ HATEOAS = True
 
 PROJECTION = True
 
-DEBUG = True
+DEBUG = False
