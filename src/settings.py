@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # URI mongoDB
-MONGO_URI = "mongodb://admin:admin@ds151461.mlab.com:51461/everest"
+MONGO_URI = ""
 
 # local mongoDB
 # MONGO_HOST = 'localhost'
