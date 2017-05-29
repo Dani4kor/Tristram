@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 
@@ -14,4 +15,4 @@ try:
     pprint(requests.get('http://' + HOST +
                         ENTERPOINT + ENDPOINT).json())
 except Exception as e:
-    print str(e) + '\n'
+    print(str(e) + '\n')
