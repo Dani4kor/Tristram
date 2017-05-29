@@ -1,18 +1,19 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 # URI mongoDB
-MONGO_URI = "mongodb://admin:admin@ds151461.mlab.com:51461/everest"
 
-# local mongoDB
-# MONGO_HOST = 'localhost'
-# MONGO_PORT = 27017
-# MONGO_USERNAME = 'user'
-# MONGO_PASSWORD = 'user'
-# MONGO_DBNAME = 'apitest'
+import os
 
+if 'MONGOLAB_URI' in os.environ:
+    MONGO_URI = str(os.environ.get('MONGOLAB_URI'))
+else:
+    with open('mysettings.txt', 'r') as f:
+        MONGO_URI = f.readline()
 
 RESOURCE_METHODS = ['GET', 'POST']
 ITEM_METHODS = ['GET', 'PATCH', 'PUT', 'DELETE']
+
 
 
 image = {
