@@ -2,7 +2,17 @@
 # -*- coding: utf-8 -*-
 
 # URI mongoDB
-MONGO_URI = ""
+
+import os
+
+if 'MONGOLAB_URI' in os.environ:
+    MONGO_URI = str(os.environ.get('MONGOLAB_URI'))
+    DEBUG = False
+
+else:
+    with open('mysettings', 'r') as f:
+        MONGO_URI = f.readline()
+    DEBUG = True
 
 # local mongoDB
 # MONGO_HOST = 'localhost'
@@ -12,8 +22,11 @@ MONGO_URI = ""
 # MONGO_DBNAME = 'apitest'
 
 
+
+
 RESOURCE_METHODS = ['GET', 'POST']
 ITEM_METHODS = ['GET', 'PATCH', 'PUT', 'DELETE']
+
 
 
 image = {
@@ -70,5 +83,3 @@ DOMAIN = {'image': image}
 HATEOAS = True
 
 PROJECTION = True
-
-DEBUG = False
