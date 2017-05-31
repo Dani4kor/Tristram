@@ -3,7 +3,6 @@
 
 from os import environ
 
-
 if 'MONGOLAB_URI' and 'PORT' in environ:
     SERVER_NAME = str(environ.get('HEROKUDOMAIN'))
     PORT = int(environ.get('PORT'))
@@ -14,6 +13,7 @@ if 'MONGOLAB_URI' and 'PORT' in environ:
     DEBUG = False
 else:
     from configparser import ConfigParser
+
     config = ConfigParser()
     config.read("mysettings.ini")
 
@@ -26,7 +26,6 @@ else:
 
 RESOURCE_METHODS = ['GET', 'POST']
 ITEM_METHODS = ['GET', 'PATCH', 'PUT', 'DELETE']
-
 
 image = {
 
@@ -98,4 +97,3 @@ XML = False
 
 EMBEDDING = True
 PROJECTION = True
-

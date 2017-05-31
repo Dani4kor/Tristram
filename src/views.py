@@ -17,4 +17,5 @@ def get_datetime():
 def hello_world():
     return render_template('index.html')
 
+
 EveHealthCheck(app, '/healthcheck')
