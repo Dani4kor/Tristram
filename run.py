@@ -3,4 +3,4 @@
 
 from src import app, settings
 
-app.run(host='localhost', port=settings.PORT)
+app.run(host=settings.HOST, port=settings.PORT)

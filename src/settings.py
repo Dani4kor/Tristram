@@ -4,8 +4,9 @@
 from os import environ
 
 if 'MONGOLAB_URI' and 'PORT' in environ:
-    SERVER_NAME = str(environ.get('HEROKUDOMAIN'))
+    #SERVER_NAME = str(environ.get('HEROKUDOMAIN'))
     PORT = int(environ.get('PORT'))
+    HOST = '0.0.0.0'
     MONGO_URI = str(environ.get('MONGOLAB_URI'))
     REDISPORT = str(environ.get('REDISPORT'))
     REDISHOST = str(environ.get('REDISHOST'))
@@ -19,6 +20,7 @@ else:
 
     MONGO_URI = config['MONGODB']['MONGO_URI']
     PORT = int(config['SERVERNAME']['PORT'])
+    HOST = str(config['SERVERNAME']['HOST'])
     REDISHOST = config['REDIS']['REDISHOST']
     REDISPORT = config['REDIS']['REDISPORT']
 
