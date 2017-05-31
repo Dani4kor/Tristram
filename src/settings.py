@@ -78,7 +78,7 @@ API_VERSION = 'v1'
 
 DOMAIN = {'image': image}
 
-HATEOAS = True
+HATEOAS = False
 
 PAGINATION = True
 
