@@ -1,26 +1,38 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# URI mongoDB
+from os import environ
 
-import os
+if 'MONGOLAB_URI' and 'PORT' in environ:
+    SERVER_NAME = str(environ.get('HEROKUDOMAIN'))
+    PORT = int(environ.get('PORT'))
+    MONGO_URI = str(environ.get('MONGOLAB_URI'))
+    REDISPORT = str(environ.get('REDISPORT'))
+    REDISHOST = str(environ.get('REDISHOST'))
 
-if 'MONGOLAB_URI' in os.environ:
-    MONGO_URI = str(os.environ.get('MONGOLAB_URI'))
+    DEBUG = False
 else:
-    with open('mysettings.txt', 'r') as f:
-        MONGO_URI = f.readline()
+    from configparser import ConfigParser
+
+    config = ConfigParser()
+    config.read("mysettings.ini")
+
+    MONGO_URI = config['MONGODB']['MONGO_URI']
+    PORT = int(config['SERVERNAME']['PORT'])
+    HOST = str(config['SERVERNAME']['HOST'])
+    REDISHOST = config['REDIS']['REDISHOST']
+    REDISPORT = config['REDIS']['REDISPORT']
+
+    DEBUG = True
 
 RESOURCE_METHODS = ['GET', 'POST']
 ITEM_METHODS = ['GET', 'PATCH', 'PUT', 'DELETE']
 
-
-
 image = {
 
-    'item_title': 'images',
+    "item_title": 'images',
 
-    'additional_lookup': {
+    "additional_lookup": {
         'url': 'regex("[\w]+")',
         'field': 'filename'
     },
@@ -56,7 +68,6 @@ RETURN_MEDIA_AS_URL = True
 # MEDIA_BASE_URL = ''
 MEDIA_ENDPOINT = 'image/media'
 
-
 # Enable URL_PREFIX.  Used in conjunction with API_VERSION to build
 # API Endpoints of the form <base_route>/<url_prefix>/<api_version>/
 URL_PREFIX = 'api'
@@ -67,8 +78,23 @@ API_VERSION = 'v1'
 
 DOMAIN = {'image': image}
 
-HATEOAS = True
+HATEOAS = False
 
+PAGINATION = True
+
+# Cache Control HTTP/1.1
+CACHE_CONTROL = 'max-age=20'
+CACHE_EXPIRES = 20
+
+# Rate Limitation
+LIMIT = (5, 3)
+RATE_LIMIT_GET = LIMIT
+RATE_LIMIT_POST = LIMIT
+RATE_LIMIT_PATCH = LIMIT
+RATE_LIMIT_DELETE = LIMIT
+
+JSON = True
+XML = False
+
+EMBEDDING = True
 PROJECTION = True
-
-DEBUG = False
