@@ -10,7 +10,7 @@ from pymongo import MongoClient
 client = MongoClient('mongodb://')
 
 db = client.everest
-pic_collection = db.pic
+pic_collection = db.image
 
 cursor = pic_collection.find({})
 pprint([document for document in cursor])
