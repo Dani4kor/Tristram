@@ -98,3 +98,5 @@ XML = False
 
 EMBEDDING = True
 PROJECTION = True
+
+X_DOMAINS = "*"
