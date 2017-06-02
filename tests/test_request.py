@@ -5,7 +5,6 @@
 import requests
 from pprint import pprint
 
-
 HOST = 'localhost:5001'
 ENTERPOINT = '/api/v1/'
 
