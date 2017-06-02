@@ -8,7 +8,7 @@ from pprint import pprint
 HOST = 'localhost:5001'
 ENTERPOINT = '/api/v1/'
 
-ENDPOINT = 'pic'
+ENDPOINT = 'image'
 
 try:
     pprint(requests.get('http://' + HOST +
