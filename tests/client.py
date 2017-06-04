@@ -51,7 +51,7 @@ def perform_delete(resource):
 
 
 def endpoint(resource):
-    return 'http://%s/%s/api/v1' % (ENTRY_POINT if not sys.argv[1:] else sys.argv[1], resource)
+    return 'http://%s/api/v1/%s' % (ENTRY_POINT if not sys.argv[1:] else sys.argv[1], resource)
 
 
 if __name__ == '__main__':
