@@ -9,15 +9,11 @@ import json
 
 from pprint import pprint
 
-
-
-
 ENTRY_POINT = 'tristram.herokuapp.com'
 
 
-
 def get_image():
-    image = [{},]
+    image = [{}, ]
     r = perform_get('image', json.dumps(image))
     print("'image' GET", r.status_code)
     return r.json()
