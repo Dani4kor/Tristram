@@ -10,7 +10,9 @@ if 'MONGOLAB_URI' and 'PORT' in environ:
     REDISPORT = str(environ.get('REDISPORT'))
     REDISHOST = str(environ.get('REDISHOST'))
 
+
     DEBUG = False
+    RESOURCE_METHODS = ['GET', 'POST']
 else:
     from configparser import ConfigParser
 
@@ -24,8 +26,9 @@ else:
     REDISPORT = config['REDIS']['REDISPORT']
 
     DEBUG = True
+    RESOURCE_METHODS = ['GET', 'DELETE', 'POST']
 
-RESOURCE_METHODS = ['GET', 'POST']
+
 ITEM_METHODS = ['GET', 'PATCH', 'PUT', 'DELETE']
 
 image = {
