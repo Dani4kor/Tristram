@@ -49,10 +49,12 @@ image = {
         },
         'tag': {
             'type': 'string',
+            'unique': True,
             'minlength': 1,
             'maxlength': 10,
         },
         'image': {
+            'unique': True,
             'type': 'media',
         }
 
